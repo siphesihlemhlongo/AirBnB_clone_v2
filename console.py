@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" Console Module """
+""" Define HBNB console """
 import cmd
-import sys
+import shy
+from shlex import split
 from models.base_model import BaseModel
 from models.__init__ import storage
 from models.user import User
@@ -13,7 +14,7 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """ Contains the functionality for the HBNB console"""
+    """ Define HBNB command interpreter"""
 
     # determines prompt for interactive/non-interactive modes
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
